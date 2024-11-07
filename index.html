@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integração API Seguro RC</title>
+</head>
+<body>
+    <h1>Consultar e Contratar Seguro RC</h1>
+
+    <!-- Autenticação -->
+    <div>
+        <h2>Autenticação</h2>
+        <input type="text" id="client_id" placeholder="Client ID">
+        <input type="text" id="client_secret" placeholder="Client Secret">
+        <button onclick="autenticar()">Autenticar</button>
+        <p id="token_info"></p>
+    </div>
+
+    <!-- Criar Proposta -->
+    <div>
+        <h2>Criar Proposta de Seguro</h2>
+        <input type="text" id="insuredName" placeholder="Nome do Segurado">
+        <input type="text" id="insuredCPF" placeholder="CPF do Segurado">
+        <input type="text" id="gender" placeholder="Gênero">
+        <input type="date" id="birthDate" placeholder="Data de Nascimento">
+        <input type="tel" id="phone" placeholder="Telefone">
+        <input type="email" id="email" placeholder="E-mail">
+        
+        <h3>Veículo</h3>
+        <input type="text" id="vehicleModelCode" placeholder="Código do Modelo">
+        <input type="text" id="licensePlate" placeholder="Placa do Veículo">
+        <input type="text" id="vin" placeholder="Número VIN">
+        <input type="number" id="modelYear" placeholder="Ano do Modelo">
+
+        <h3>Cobertura</h3>
+        <input type="number" id="coverageDurationMonths" placeholder="Duração da Cobertura (meses)">
+        <select id="isSimulation">
+            <option value="true">Simulação</option>
+            <option value="false">Contratação</option>
+        </select>
+        <button onclick="criarProposta()">Criar Proposta</button>
+        <p id="proposta_info"></p>
+    </div>
+
+    <!-- Contratar Seguro -->
+    <div>
+        <h2>Contratar Seguro</h2>
+        <input type="text" id="proposalId" placeholder="ID da Proposta">
+        <input type="text" id="planId" placeholder="ID do Plano">
+
+        <h3>Endereço do Segurado</h3>
+        <input type="text" id="streetName" placeholder="Nome da Rua">
+        <input type="text" id="streetNumber" placeholder="Número">
+        <input type="text" id="complement" placeholder="Complemento">
+        <input type="text" id="region" placeholder="Região">
+        <input type="text" id="city" placeholder="Cidade">
+        <input type="text" id="district" placeholder="Distrito">
+        <input type="text" id="postalCode" placeholder="CEP">
+
+        <button onclick="contratarSeguro()">Contratar Seguro</button>
+        <p id="contratacao_info"></p>
+    </div>
+
+    <!-- JavaScript para a interação com a API -->
+    <script>
+        let token = '';
+
+        async function autenticar() {
+            const clientId = document.getElementById('client_id').value;
+            const clientSecret = document.getElementById('client_secret').value;
+            // ... Função de autenticação continua...
+        }
+
+        async function criarProposta() {
+            // Função para enviar dados da proposta para a API...
+        }
+
+        async function contratarSeguro() {
+            // Função para enviar dados de contratação para a API...
+        }
+    </script>
+</body>
+</html>
+
